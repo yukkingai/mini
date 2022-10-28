@@ -1,0 +1,372 @@
+@supports (grid-area: auto) {
+  /*------------ Start Mobile ------------*/
+  @media screen and (max-width: 799px) {
+    .site {
+      max-width: 799px;
+    }
+
+    // .hidden {
+    //     display: none;
+    // }
+
+    /*------------ Mobile Grid Items ------------*/
+
+    .head,
+    .main > *,
+    .foot {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .one-item,
+    .mobile {
+      display: grid;
+      grid-column: 1 / span 2;
+      grid-template-columns: 1fr;
+    }
+
+    .two-items {
+      display: grid;
+      grid-column: 1 / span 2;
+      grid-template-columns: repeat(2, 1fr);
+      justify-content: space-evenly;
+      row-gap: 2em;
+      column-gap: 2em;
+    }
+
+    .three-items {
+      display: grid;
+      grid-column: 1 / span 2;
+      grid-template-columns: repeat(3, 1fr);
+      justify-content: space-evenly;
+      row-gap: 2em;
+      column-gap: 2em;
+    }
+
+    .things-section {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      height: 600px;
+    }
+
+    main {
+      margin: 0 auto;
+      background-color: white;
+      // height: 800px;
+      width: 600px;
+
+      h1 {
+        color: rgb(59, 58, 57);
+        font-size: 48px;
+        text-align: center;
+        padding: 40px 40px;
+        font-style: italic;
+        margin: auto;
+      }
+
+      h2 {
+        font-size: 22px;
+        text-align: center;
+        padding: 10px 0 0 0;
+        padding-bottom: 20px;
+      }
+
+      .intro {
+        padding: 10px;
+        padding-bottom: 60px;
+      }
+
+      h3 {
+        font-size: 22px;
+        color: cadetblue;
+        text-align: center;
+        font-style: oblique;
+      }
+
+      article {
+        font-size: 22px;
+      }
+
+      .center-text {
+        width: 400px;
+        margin: auto;
+        text-align: center;
+      }
+    }
+
+    #psychology,
+    #hiking,
+    #stationery {
+      cursor: pointer;
+      z-index: 100;
+    }
+
+    .lightbox-text {
+      padding: 10px;
+      padding-bottom: 10px;
+    }
+
+    /* =========== CSS effect on click to see ========*/
+    .typing {
+      height: 7vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .typing-effect {
+      width: 33ch;
+      animation: typing 2s steps(22), effect 0.5s step-end infinite alternate;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 3px solid;
+      font-family: monospace;
+      font-size: 22px;
+    }
+
+    @keyframes typing {
+      from {
+        width: 0;
+      }
+    }
+
+    @keyframes effect {
+      50% {
+        border-color: transparent;
+      }
+    }
+    /* =========== CSS effect on click to see ========*/
+
+    #lightbox {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      left: 70px;
+      top: 620px;
+
+      width: 500px;
+      height: 300px;
+
+      align-items: center;
+      background-color: whitesmoke;
+    }
+
+    .lightbox1 {
+      display: none;
+      position: absolute;
+    }
+
+    .lightbox2 {
+      display: none;
+      position: absolute;
+    }
+
+    .show-lightbox {
+      display: block !important;
+    }
+
+    footer {
+      margin: auto;
+      width: 600px;
+    }
+  }
+
+  /*----------------- Tablet --------------------*/
+
+  @media screen and (min-width: 800px) and (max-width: 1023px) {
+    /*-- Tablet Fixes --*/
+    .site {
+      max-width: 1023px;
+    }
+  }
+
+  /*----------------- Desktop --------------------*/
+
+  @media screen and (min-width: 800px) {
+    .site {
+      max-width: none;
+    }
+
+    .head,
+    .main > *,
+    .foot {
+      display: grid;
+      // grid-template-columns: 1fr repeat(2, minmax(auto, 30em)) 1fr;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .one-item {
+      display: grid;
+      grid-column: 2 / span 2;
+      grid-template-columns: 1fr;
+    }
+
+    .two-items,
+    .full {
+      display: grid;
+      grid-column: 1 / span 2;
+      grid-template-columns: repeat(2, 1fr);
+      justify-content: space-evenly;
+      row-gap: 2em;
+      column-gap: 2em;
+    }
+
+    .three-items {
+      display: grid;
+      grid-column: 2 / span 2;
+      grid-template-columns: repeat(3, 1fr);
+      justify-content: space-evenly;
+      row-gap: 2em;
+      column-gap: 2em;
+    }
+
+    .things-section {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      height: 600px;
+    }
+
+    main {
+      margin: 0 auto;
+      background-color: white;
+      width: 960px;
+      // height: 800px;
+
+      h1 {
+        color: rgb(59, 58, 57);
+        font-size: 48px;
+        text-align: center;
+        padding: 40px 40px;
+        font-style: italic;
+        margin: auto;
+      }
+
+      h2 {
+        font-size: 22px;
+        text-align: center;
+        padding: 10px;
+        padding-bottom: 20px;
+      }
+
+      .intro {
+        padding: 10px;
+        padding-bottom: 60px;
+      }
+
+      h3 {
+        font-size: 22px;
+        color: cadetblue;
+        text-align: center;
+        font-style: oblique;
+      }
+
+      article {
+        font-size: 22px;
+      }
+
+      .center-text {
+        width: 600px;
+        margin: auto;
+        text-align: center;
+      }
+    }
+
+    #psychology,
+    #hiking,
+    #stationery {
+      cursor: pointer;
+    }
+
+    /* =========== CSS effect on click to see ========*/
+    .typing {
+      height: 5vh;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .typing-effect {
+      width: 34ch;
+      animation: typing 2s steps(22), effect 0.5s step-end infinite alternate;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 3px solid;
+      font-family: monospace;
+      font-size: 22px;
+    }
+
+    @keyframes typing {
+      from {
+        width: 0;
+      }
+    }
+
+    @keyframes effect {
+      50% {
+        border-color: transparent;
+      }
+    }
+
+    #lightbox {
+      position: absolute;
+      margin: auto;
+      left: 320px;
+      top: 550px;
+
+      width: 600px;
+      height: 300px;
+
+      align-items: center;
+      background-color: whitesmoke;
+    }
+
+    .text1 {
+      display: none;
+      position: absolute;
+    }
+
+    .text2 {
+      display: none;
+      position: absolute;
+    }
+
+    /* =========== CSS effect on click to see ========*/
+    @keyframes showme {
+      0% {
+        opacity: 0;
+        transform: translateY(80%);
+      }
+      20% {
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+        transform: translateY(0%);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0%);
+      }
+    }
+
+    /* =========== CSS effect on click to see ========*/
+
+    .show-lightbox {
+      display: block !important;
+    }
+
+    footer {
+      margin: auto;
+      width: 960px;
+    }
+  }
+}

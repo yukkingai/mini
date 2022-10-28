@@ -1,0 +1,125 @@
+body {
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-repeat: no-repeat;
+  opacity: 95%;
+}
+
+.site {
+  max-width: none;
+}
+
+.head,.main > *,.foot {
+  display: grid;
+  grid-template-columns: 1fr repeat(2, minmax(auto, 30em)) 1fr;
+}
+
+.hidden {
+  display: none;
+}
+
+.one-item {
+  display: grid;
+  grid-column: 2 / span 2;
+  grid-template-columns: 1fr;
+}
+
+.two-items {
+  display: grid;
+  grid-column: 1 / span 2;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-evenly;
+  row-gap: 2em;
+  column-gap: 2em;
+}
+
+.three-items {
+  display: grid;
+  grid-column: 2 / span 2;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-evenly;
+  row-gap: 2em;
+  column-gap: 2em;
+}
+
+
+main {
+  margin: 0 auto;
+  background-color: white;
+  width: 960px;
+  // height: 800px;
+
+  h1 {
+    color: rgb(59, 58, 57);
+    font-size: 48px;
+    text-align: center;
+    padding: 40px 40px;
+    font-style: italic;
+    margin: auto;
+  }
+
+  h2 {
+    font-size: 22px;
+    text-align: center;
+    padding: 10px;
+    padding-bottom: 20px;
+  }
+
+  .intro {
+    padding: 10px;
+    padding-bottom: 60px;
+  }
+
+  h3 {
+    font-size: 22px;
+    color: cadetblue;
+    text-align: center;
+    font-style: oblique;
+  }
+
+  .center-text {
+    width: 600px;
+    margin: auto;
+    text-align: center;
+  }
+}
+
+//  {
+//   cursor: pointer;
+// }
+
+
+
+#lightbox {
+  position: absolute;
+  margin: auto;
+  left: 320px;
+  top: 550px;
+
+  width: 600px;
+  height: 300px;
+
+  align-items: center;
+  background-color: whitesmoke;
+}
+
+.text1 {
+  display: none;
+  position: absolute;
+}
+
+.text2 {
+  display: none;
+  position: absolute;
+}
+
+.show-lightbox {
+  display: block !important;
+}
+
+footer {
+  margin: auto;
+  width: 960px;
+}
+
+//this is a perfectly valid SASS comment
