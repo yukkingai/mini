@@ -1,6 +1,29 @@
 header {
     color: black;
     background-color: white;
-
-    nav ul { float: right;}
+    position: fixed;
+    top: 0px;
+    width: 100%; 
+    transition: top 0.3s;
+    z-index: 100;
 }
+
+
+.navbar a {
+    float: left;
+    color: black;
+    text-align: center;
+    margin: 0;
+    text-decoration: none;
+    padding: 15px 15px;
+    height: 75px;
+  }
+
+.mainNav {
+  // padding: 15px;
+}
+
+.mainNav a:hover {
+    background-color: black;
+    color: white;
+  }
