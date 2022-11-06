@@ -9,11 +9,6 @@ body {
   max-width: none;
 }
 
-.head,.main > *,.foot {
-  display: grid;
-  grid-template-columns: 1fr repeat(2, minmax(auto, 30em)) 1fr;
-}
-
 .hidden {
   display: none;
 }
@@ -42,12 +37,10 @@ body {
   column-gap: 2em;
 }
 
-
 main {
   margin: 0 auto;
   background-color: white;
-  width: 960px;
-  // height: 800px;
+  
 
   h1 {
     color: rgb(59, 58, 57);
@@ -65,11 +58,6 @@ main {
     padding-bottom: 20px;
   }
 
-  .intro {
-    padding: 10px;
-    padding-bottom: 60px;
-  }
-
   h3 {
     font-size: 22px;
     color: cadetblue;
@@ -77,49 +65,27 @@ main {
     font-style: oblique;
   }
 
-  .center-text {
-    width: 600px;
-    margin: auto;
+  h5 {
     text-align: center;
   }
+
 }
 
-//  {
-//   cursor: pointer;
-// }
-
-
-
-#lightbox {
-  position: absolute;
-  margin: auto;
-  left: 320px;
-  top: 550px;
-
-  width: 600px;
-  height: 300px;
-
-  align-items: center;
-  background-color: whitesmoke;
+#video {
+  padding-top: 30px;
 }
 
-.text1 {
-  display: none;
-  position: absolute;
+.models-row ul {
+  display: flex;
+  flex-direction: row;
+  padding: 30px;
 }
 
-.text2 {
-  display: none;
-  position: absolute;
-}
 
-.show-lightbox {
-  display: block !important;
-}
 
-footer {
-  margin: auto;
-  width: 960px;
-}
+
+
+
+
 
 //this is a perfectly valid SASS comment

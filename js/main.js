@@ -1,52 +1,43 @@
-// all imports have to happen here at the top
-import ProfPancel from "./components/TheProfComponent.js";
+import CarThumb from "./components/TheCarComponent.js";
+import LightBox from "./components/TheLightbox.js";
 
-// instantiate the Vue instance here
 const { createApp } = Vue;
 
 createApp({
-  // ALWAYS get your remote data here, in the created lifecycle hook, using fetch or the dataMiner
+  
   created() {
-    // fetch the json data and pass it to the Vue instance
+    
     fetch("./data.json")
       .then((res) => res.json())
       .then((data) => {
-        // throw the data into the Vue instance
-        // the "this" keyword ALWAYS refers to the Vue instance itself
-        this.dynamicData = data;
+       
+        this.carData = data;
       })
       .catch((error) => console.error(error));
   },
 
   data() {
     return {
-      message: "Hello Vue!",
-      anotherMessage: "Hey, I am good!",
-      profs: ["Joe", "John", "Jarrd", "Justin"],
-      yetAnotherMessage: "more data",
-      dynamicData: {},
-      currentProf: {},
-      username: "",
-      password: "",
+      carData: {},
+      lbData: {}
     };
   },
 
-  methods: {
-    logClicked() {
-      console.log("click on a button");
-    },
+  components: {
+    // custom html tag
+    thecarthumb: CarThumb, 
+    thelightbox: LightBox // register the lb
+  },
 
-    showData(item) {
-      // debugger;
-      this.currentProf = item;
+  methods: {
+    loadLightBox(car) {
+        this.lbData = car;
     },
 
     sendForm() {
-      console.log(this.username, this.password);
+      console.log(this.fname, this.lname, this.email);
     },
-  },
+  }
 
-  components: {
-    profpancel: ProfPancel,
-  },
+  
 }).mount("#app");
