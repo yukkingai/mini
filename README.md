@@ -26,11 +26,13 @@ For academic reference only.
 
 Oct28 Finished research on database, and collection of required images and media files
 
-Nov01 Basic content structure on html page done
+Nov1 Basic content structure on html page done
 
-Nov02 Starting point on CSS and javascript
+Nov2 Starting point on CSS and javascript
 
-Nov05 Upload 1st version of dev branch to github, was testing AJAX which worked on index, but not on lightbox
+Nov5 Upload 1st version of dev branch to github, was testing AJAX which worked on index, but not on lightbox
+
+Nov9 Fixed js bugs and finish lightbox settings
 
 # MIT License
 
