@@ -25,8 +25,11 @@ For academic reference only.
 # History
 
 Oct28 Finished research on database, and collection of required images and media files
+
 Nov01 Basic content structure on html page done
+
 Nov02 Starting point on CSS and javascript
+
 Nov05 Upload 1st version of dev branch to github, was testing AJAX which worked on index, but not on lightbox
 
 # MIT License
@@ -47,4 +50,5 @@ email: y_ngai@fanshaweonline.ca
 # Credits
 
 Yuki Ngai
+
 Trevor Van Rys

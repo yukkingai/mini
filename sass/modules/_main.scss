@@ -75,17 +75,13 @@ main {
   padding-top: 30px;
 }
 
-.models-row ul {
-  display: flex;
-  flex-direction: row;
-  padding: 30px;
+.models-row ul li {
+  display: inline-block;
+  // flex-direction: row;
+  // padding: 30px;
 }
 
 
 
 
 
-
-
-
-//this is a perfectly valid SASS comment
