@@ -52,21 +52,9 @@
       
         <!----database shows here, pics/text/specs/more pics-->
         
-        <thelightbox v-for="car in carData" :car="car"></thelightbox>
-        <!-- <h2 class="hidden">lb-contents</h2>
-        <img @click="closeLB" src="images/closeIcon.png" class="lightbox_close">
+        <thelightbox @closelightbox="this.showLB = false" v-if="showLB" :item="lbData"></thelightbox>
         
-        <div>
-          <img :src='"images/" + header-pic' alt="lb-header img">
-
-            <h3>{{name}}</h3>
-            <article>{{type}}<span>{{price}}</span></article>
-
-              <p class="lb_text">{{desc}}</p>
-              <p class="lb_text">{{specs}}</p>
-          <img :src='"images/" + more-pics' alt="lb-pics img">
-        </div> -->
-       <!-- end lightbox -->
+       <!-- end lightbox-->
         
       
       <section class="contact-form">

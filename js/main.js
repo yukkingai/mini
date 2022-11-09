@@ -19,7 +19,11 @@ createApp({
   data() {
     return {
       carData: {},
-      lbData: {}
+      lbData: {},
+      showLB: false,
+      fname: "",
+      lname: "",
+      email: "",
     };
   },
 
@@ -32,6 +36,8 @@ createApp({
   methods: {
     loadLightBox(car) {
         this.lbData = car;
+
+        this.showLB = true;
     },
 
     sendForm() {

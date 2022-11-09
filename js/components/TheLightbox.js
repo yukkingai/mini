@@ -8,8 +8,19 @@ export default {
 
     template: `
     <section class="lightbox">
-        <img :src='"images/" + header-pic' alt="lb-header img">
-        <h3>{{name}}</h3>
+    
+        <img @click="closeLB" src="images/closeIcon.png" class="lightbox_close">
+        
+        <div>
+        <img :src='"images/" + item.headerpic' alt="lb-header img">
+
+            <h3>{{item.name}}</h3>
+            <article>{{item.type}}<span>{{item.price}}</span></article>
+
+            <p class="lb_text">{{item.desc}}</p>
+            <p class="lb_text">{{item.specs}}</p>
+        <img :src='"images/" + item.morepics' alt="lb-pics img">
+        </div>
     </section>
     `,
 
