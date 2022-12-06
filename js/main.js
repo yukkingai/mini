@@ -10,10 +10,14 @@ createApp({
     fetch("./data.json")
       .then((res) => res.json())
       .then((data) => {
-       
-        this.carData = data;
+        this.carData = data
       })
-      .catch((error) => console.error(error));
+      .catch((error) => {
+        console.error(error);
+        document.querySelector('.car-container').innerHTML = `
+        <div class="error">Error: something went wrong! : ( <br> Please check your connection.</div>
+        `;
+    });
   },
 
   data() {
@@ -36,8 +40,8 @@ createApp({
   methods: {
     loadLightBox(car) {
         this.lbData = car;
-
         this.showLB = true;
+        window.scrollBy(0,-1000);
     },
 
     sendForm() {
@@ -47,3 +51,5 @@ createApp({
 
   
 }).mount("#app");
+
+

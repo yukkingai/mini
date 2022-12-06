@@ -16,7 +16,7 @@
     <header class="main-header navbar">
       <h2 class="hidden">MINI logo</h2>
       <div>
-        <a href="index.html"><img src="./images/logo.svg" width="92" height="41" id="logo" alt="MINI COOPER logo"></a>
+        <a href="index.html"><img src="./images/logo-footer.svg" width="90" height="40" id="logo" alt="MINI COOPER logo"></a>
       </div>
 
       <div class="mainNav">
@@ -28,11 +28,13 @@
            <li><a href="https://mini.ca/en/shopping/inventory">BOOK A TEST DRIVE</a></li>
            <li><a href="https://mini.ca/en/shopping/buildandprice">SHOP</a></li>
         </ul>
+        
      </div>
+     <div class="line"></div>
     </header>
 
     <main id="app" class="main">
-      <section>
+      <section id="discover">
         <h2 class="hidden">Hero video</h2>
         <div>
           <video id="video" src="./assets/new-MINI-2024.mp4" controls></video>
@@ -40,12 +42,14 @@
         
       </section>
 
-      <section>
-        <h2 class="hidden">Models</h2>
+      <section id="model">
+        <h2>New Models</h2>
         <div class="models-row">
           <ul>
             <thecarthumb @loadlbdata="loadLightBox" v-for="car in carData" :car="car"></thecarthumb>
           </ul>
+
+          <div class="car-container"></div>
         </div>
       </section>
 
@@ -57,19 +61,34 @@
        <!-- end lightbox-->
         
       
-      <section class="contact-form">
-        <h2>STAY IN THE KNOW.</h2>
-        <div>
-          <article>Stay informed about news, special offers, products and services from or on behalf of MINI Canada.</article>
+      <section class="contact-form" id="contact">
+        <div class="contact-line"></div>
+        <div class="contact-area">
+            <h2>STAY IN THE KNOW.</h2>
+          <div>
+            <article>Stay informed about news, special offers, products and services from or on behalf of MINI Canada.</article>
+          </div>
+          <form action="form-area">
+            
+              <div class="form-container">
+                <input v-model="fname" type="text" placeholder="First Name">
+              </div>
+
+              <div class="form-container">
+                <input v-model="lname" type="text" placeholder="Last Name">
+              </div>
+
+              <div class="form-container email-form">
+                <input v-model="email" type="email" placeholder="Email Address">
+              </div>
+              
+              <div>
+                <input class="form-container submit" @click.prevent="sendForm" type="submit" value="subscribe">
+              </div>
+            
+        </form>
         </div>
-        <div>
-          <form @keyup.enter="sendForm" action="">
-            <input v-model="fname" type="text" placeholder="First Name">
-            <input v-model="lname" type="text" placeholder="Last Name">
-            <input v-model="email" type="email" placeholder="Email Address">
-            <input @click.prevent="sendForm" type="submit" value="SUBMIT">
-          </form>
-        </div>
+        
        
       </section>
 
@@ -78,10 +97,10 @@
     <footer class="foot">
       <h2 class="hidden">footer-nav</h2>
       <div>
-        <a href="#index"><img src="./images/logo-footer.svg" alt="MINI COOPER logo" width="63" height="28"></a>
+        <a href="#app"><img src="./images/logo-footer.svg" alt="MINI COOPER logo" width="63" height="28"></a>
       </div>
-      <div>
-        © 2022 MINI Canada.
+      <div id="copyright">
+        © 2022 MINI Canada
       </div>
 
     </footer>

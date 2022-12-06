@@ -1,8 +1,12 @@
 # MINI COOPER APP
 
-This project is to create a custom website to show car models of MINI COOPER using SASS, Vue, AJAX and Fetch API and make it dynamic in one page.
+This project is to create a mockup website to show car models of MINI COOPER using SASS, Vue, AJAX/Fetch API and shows its information dynamiclly on one page. All car models' details are stored in local JSON which using fetch API to call the data and render more contents to a lightbox.
 
-All car models' details are stored in JSON object which using fetch API to call the data and show more content on the page.
+# Written Plan
+
+This site is a mockup website of Mini Cooper, showing some new models of this brand. Video was positioned at the top to get the most attention from users. Following that, car models were showed on the site which were fetched from JSON objects. Connection message were setuped to show users in the UI if their connection appear unstable or disconnected.
+
+AJAX was used for fetching data for car models and thier names, also with the details information in a lightbox, including cars' model, description, photos, specs, and price, etc. There were two components js files for seperating these two parts of AJAX data for easier organization. All data were dynamically rendered to the site depending which models users clicked and would show in a particular lightbox. Photo gallery for showing more photos of the cars and rendered out from JSON array.
 
 # Installation
 
@@ -26,11 +30,17 @@ For academic reference only.
 
 Oct28 Finished research on database, and collection of required images and media files
 
-Nov01 Basic content structure on html page done
+Nov1 Basic content structure on html page done
 
-Nov02 Starting point on CSS and javascript
+Nov2 Starting point on CSS and javascript
 
-Nov05 Upload 1st version of dev branch to github, was testing AJAX which worked on index, but not on lightbox
+Nov5 Upload 1st version of dev branch to github, was testing AJAX which worked on index, but not on lightbox
+
+Nov9 Fixed js bugs and finished lightbox settings
+
+Nov10-11 Finished enable lightbox. 
+
+
 
 # MIT License
 
