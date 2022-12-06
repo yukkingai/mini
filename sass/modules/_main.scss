@@ -13,6 +13,7 @@ body {
   display: none;
 }
 
+
 .one-item {
   display: grid;
   grid-column: 2 / span 2;
@@ -51,37 +52,134 @@ main {
     margin: auto;
   }
 
-  h2 {
+  h2 { // stay in know
     font-size: 22px;
     text-align: center;
     padding: 10px;
     padding-bottom: 20px;
   }
 
-  h3 {
-    font-size: 22px;
-    color: cadetblue;
-    text-align: center;
-    font-style: oblique;
+  #model h2 {
+    color: #fff;
+    font-weight: 600;
+    background-color: #000;
+    margin: 0;
+    padding: 15px;
   }
 
-  h5 {
+  h3 { // lb
+    font-size: 22px;
+    color: black;
+    text-align: center;
+    font-weight: 600;
+  }
+
+  h5 { // render thumbtails
     text-align: center;
   }
 
 }
 
 #video {
-  padding-top: 30px;
+  width: 100vw;
 }
 
-.models-row ul li {
+.models-row {
+  text-align: center;
+}
+
+.models-row li {
   display: inline-block;
-  // flex-direction: row;
-  // padding: 30px;
+  margin-top: 60px;
+  height: 240px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.contact-form {
+  background-image: url('/images/stay-know-bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  text-align: center;
+  height: 80vh;
+  
+}
+
+.contact-line {
+  padding: 5px;
+  background-color: black;
+  width: 100%;
+  position: absolute;
+}
+
+.contact-form h2 {
+  color: black;
+  font-size: 2.3em;
+  padding-top: 60px;
+  font-weight: 600;
+}
+
+.contact-form article {
+  font-size: 1.3em;
+  padding: 30px 0 40px;
+}
+
+.contact-area {
+  max-width: 575px;
+  margin: auto;
+}
+
+.form-area {
+  margin: auto;
+  
+}
+
+.form-container {
+  width: calc(35% - 15px);
+  margin: 0 15px;
+  float: left;
+  
+  background: white;  
+  padding: 0 10px;
+}
+
+.email-form {
+  width: calc(60% - 15px);
+  text-align: left;
+  margin-top: 30px;
+}
+
+.submit {
+  width: calc(25% - 15px);
+  margin: 25px 40px;
+  padding: 15px 15px;
+  text-transform: uppercase;
+  font-weight: 600;
+  background-color: black;
+  color: white;
+}
+
+.submit:hover {
+  background-color: white;
+  cursor: pointer;
+  color: black;
 }
 
 
+form input {
+  background: transparent;
+  border: 0;
+  outline: 0;
+  padding: 10px;    
+}
+
+
+.error {
+  padding: 100px;
+  color: red;
+  font-weight: 600;
+}
 
 
 

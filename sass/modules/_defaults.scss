@@ -2,3 +2,19 @@ body {
     background-color: $main-bg;
     color: $main-color;
 }
+
+.one-item {
+    display: grid;
+    grid-column: 2 / span 2;
+    grid-template-columns: 1fr;
+}
+
+
+.two-items {
+    display: grid;
+    grid-column: 2 / span 2;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-evenly; 
+    row-gap: 2em;
+    column-gap: 2em;
+}

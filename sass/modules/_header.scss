@@ -1,6 +1,6 @@
 header {
-    color: black;
-    background-color: white;
+    color: white;
+    background-color: black;
     position: fixed;
     top: 0px;
     width: 100%; 
@@ -8,22 +8,36 @@ header {
     z-index: 100;
 }
 
+#logo {
+  top: -10px;
+  position: relative;
+}
 
 .navbar a {
     float: left;
-    color: black;
-    text-align: center;
+    color: white;
     margin: 0;
     text-decoration: none;
-    padding: 15px 15px;
-    height: 75px;
+    padding: 30px;
+    height: 80px;
   }
 
-.mainNav {
-  // padding: 15px;
-}
 
 .mainNav a:hover {
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: black;
+    font-weight: 600;
+  }
+
+  // .line {
+  //   padding: 5px;
+  //   width: 100%;
+  //   background-color: black;
+
+  //   position: absolute;
+  //   bottom: -1px;
+  // }
+
+  .mainNav ul {
+    list-style: none;
   }
