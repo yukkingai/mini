@@ -7,7 +7,8 @@ createApp({
   
   created() {
     
-    fetch("./data.json")
+    // fetch("./data.json")
+    fetch("./scripts/json.php")
       .then((res) => res.json())
       .then((data) => {
         this.carData = data
